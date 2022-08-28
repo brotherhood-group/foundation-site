@@ -4,7 +4,6 @@ import { Fragment, h } from "preact";
 import { tw } from "@twind";
 import { HeadElement } from "../components/HeadElement.tsx";
 import { PageProps } from "$fresh/server.ts";
-
 export default function Home(ctx: PageProps) {
   return (
     <>
@@ -14,36 +13,25 @@ export default function Home(ctx: PageProps) {
         url={ctx.url}
       />
       <section
-        class={tw`w-full pt-5 pb-8 bg-black bg-cover lg:pb-32`}
+        class={tw`w-full py-16`}
       >
         <div
-          class={tw`max-w-2xl px-8 pb-10 mx-auto space-y-8 text-white md:max-w-5xl lg:px-5 xl:px-0`}
+          class={tw`mx-auto py-8 text-white max-w-6xl flex flex-col items-center md:flex-row`}
         >
-          <h1 class={tw`text-5xl font-extrabold sm:text-7xl mb-2`}>
-            No Religion. No Work. Just Men.
+          <h1>
+            No Religion.<br /> No Shop Talk. <br />No Politics. <br />Just Men.
           </h1>
-          <h2 class={tw`text-5xl font-extrabold sm:text-7xl mb-2`}>
-            broth·er·hood
-          </h2>
-          <p class={tw`block text-lg text-gray-300 sm:text-xl`}></p>
-          <div class={tw``}>
-            <div class={tw``}>'brəT͟Hərˌho͝od/</div>
-            <div class={tw``}></div>
-          </div>~ an association, society, or community of people linked by a
-          common interest, religion, or trade.<p></p>
-          <div class={tw`w-full`}>
+
+          <div class={tw`w-[50%] text-right`}>
             <a
               href="/apply-now"
               class={tw`inline-block w-full px-8 py-5 mb-6 text-2xl bg-indigo-700 sm:mb-0 sm:w-auto hover:bg-indigo-600 rounded-xl`}
-              data-rounded="rounded-xl"
-              data-primary="indigo-600"
             >
               Apply to Join
             </a>
             <a
               href="/learn-more"
               class={tw`inline-block w-full px-8 py-5 text-2xl bg-gray-800 sm:w-auto sm:ml-4 hover:bg-gray-700 rounded-xl`}
-              data-rounded="rounded-xl"
             >
               Learn More
             </a>
@@ -58,18 +46,18 @@ export default function Home(ctx: PageProps) {
           />
         </div>
       </section>
-      <section class={tw`w-full px-8 pt-20 pb-16 bg-white xl:px-0`}>
+      <section class={tw`w-full px-8 pt-20 pb-16 bg-white text-black xl:px-0`}>
         <div
           class={tw`flex flex-col items-start max-w-6xl mx-auto md:flex-row`}
         >
           <h2
-            class={tw`w-full text-7xl mb-2 font-extrabold tracking-normal text-black sm:text-5xl md:text-5xl md:pr-10 lg:pr-16 xl:pr-20 md:leading-none md:-mt-2 md:w-1/2`}
+            class={tw`tracking-normal text-black md:pr-10 lg:pr-16 xl:pr-20 md:-mt-2 md:w-1/2`}
           >
             Men helping men
           </h2>
           <div class="flex flex-col w-full mt-8 space-y-5 md:w-1/2 md:space-y-10 md:mt-0">
             <p
-              class={tw`col-span-6 text-base font-normal text-gray-700 lg:leading-8 xl:leading-8 md:text-xl`}
+              class={tw`text-gray-700 leading-8 md:text-xl`}
             >
               The Brotherhood Group is an organization for men who are looking
               for a place to belong and make friends. We are not a religious
@@ -77,7 +65,7 @@ export default function Home(ctx: PageProps) {
               happiness of underserved communities.
             </p>
             <p
-              class={tw`col-span-6 text-base font-normal text-gray-700 lg:leading-8 xl:leading-9 md:text-xl`}
+              class={tw`text-base font-normal text-gray-700 lg:leading-8 xl:leading-9 md:text-xl`}
             >
               Our foundation provides free resources to our members via support
               groups, events, workshops and referrals to local health care
@@ -86,12 +74,12 @@ export default function Home(ctx: PageProps) {
           </div>
         </div>
       </section>
-      <section class={tw`w-full px-8 py-16 bg-gray-800 xl:px-8 `}>
+      <section class={tw`w-full px-8 py-16 bg-gray-800 text-white xl:px-8 `}>
         <div class={tw`max-w-6xl mx-auto`}>
           <div class={tw`flex flex-col items-center md:flex-row`}>
             <div class="w-full space-y-5 md:w-3/5 md:pr-16">
               <p class={tw`font-medium text-blue-500 uppercase`}>
-                Building Friendship
+                Building Friendships
               </p>
 
               <p class={tw`text-xl md:pr-16`}>
@@ -118,7 +106,7 @@ export default function Home(ctx: PageProps) {
 
                 <div class={tw`block`}>
                   <button
-                    class={tw`w-full px-3 py-4 font-medium text-white bg-blue-600 rounded-lg`}
+                    class={tw`w-full px-3 py-4 font-medium text-white bg-blue-500 rounded-lg`}
                   >
                     Subscribe
                   </button>
@@ -128,15 +116,15 @@ export default function Home(ctx: PageProps) {
           </div>
         </div>
       </section>
-      <section class={tw`w-full px-8 pt-20 pb-16 bg-white xl:px-0`}>
+      <section class={tw`w-full px-8 pt-20 pb-16 bg-white text-black xl:px-0`}>
         <div
           class={tw`flex flex-col items-start max-w-6xl mx-auto md:flex-row`}
         >
-          <h3
-            class={tw`w-full text-7xl font-extrabold tracking-normal text-black sm:text-5xl md:text-5xl md:pr-10 lg:pr-16 xl:pr-20 md:leading-none md:-mt-2 md:w-1/2`}
+          <h2
+            class={tw`tracking-normal text-black md:pr-10 lg:pr-16 xl:pr-20 md:leading-none md:-mt-2 md:w-1/2`}
           >
             Friends IRL
-          </h3>
+          </h2>
           <div class="flex flex-col w-full mt-8 space-y-5 md:w-1/2 md:space-y-10 md:mt-0">
             <p
               class={tw`col-span-6 text-base font-normal text-gray-700 lg:leading-8 xl:leading-8 md:text-xl`}

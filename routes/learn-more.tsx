@@ -13,6 +13,16 @@ export default function ApplyNow(ctx: PageProps) {
         description=""
         url={ctx.url}
       />
+      <h2 class={tw`text-5xl font-extrabold sm:text-7xl mb-2`}>
+        broth·er·hood
+      </h2>
+      <p class={tw`block text-lg text-gray-300 sm:text-xl`}></p>
+
+      <p class={tw``}>'brəT͟Hərˌho͝od/</p>
+      <p>
+        ~ an association, society, or community of people linked by a common
+        interest, religion, or trade.
+      </p>
     </>
   );
 }

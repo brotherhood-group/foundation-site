@@ -2,6 +2,7 @@
 import { h } from "preact";
 import { Head } from "$fresh/runtime.ts";
 
+
 export type HeadProps = {
   url: URL;
   title: string;
@@ -31,7 +32,7 @@ export function HeadElement({ description, image, title, url }: HeadProps) {
         href="/favicon-16x16.png"
       />
       <link rel="manifest" href="/site.webmanifest" />
-      <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5" />
+      <link rel="mask-icon" href="/safari-pinned-tab.svg" />
       <meta name="msapplication-TileColor" content="#00aba9" />
       <meta name="theme-color" content="#ffffff" />
       <meta name="description" content={description} />
@@ -50,6 +51,9 @@ export function HeadElement({ description, image, title, url }: HeadProps) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
+      
+        
+     
     </Head>
   );
 }
