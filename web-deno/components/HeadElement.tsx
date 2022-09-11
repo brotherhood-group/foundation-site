@@ -1,7 +1,8 @@
 /** @jsx h */
 import { h } from "preact";
 import { Head } from "$fresh/runtime.ts";
-
+import { apply, tw } from "@twind";
+import { css } from "twind/css";
 
 export type HeadProps = {
   url: URL;
@@ -11,6 +12,12 @@ export type HeadProps = {
 };
 
 export function HeadElement({ description, image, title, url }: HeadProps) {
+  css({
+    h1:
+      apply`text(uppercase 5xl md:7xl) font(extrabold serif) my(2 md:4) leading-none`,
+    h2: apply`text-5xl font(extrabold) my(2 md:4)`,
+    h3: apply`text-4xl font(extrabold mono) my(1 md:2)`,
+  });
   return (
     <Head>
       <title>{title}</title>
@@ -51,9 +58,22 @@ export function HeadElement({ description, image, title, url }: HeadProps) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       {image && <meta name="twitter:image" content={image} />}
-      
-        
-     
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossOrigin="true"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400&amp;display=swap"
+        rel="stylesheet"
+      />
+      <link
+        href="https://fonts.googleapis.com/css2?family=Crete+Round&amp;family=Oswald:wght@200;400&amp;display=swap"
+        rel="stylesheet"
+      >
+      </link>
     </Head>
   );
 }
